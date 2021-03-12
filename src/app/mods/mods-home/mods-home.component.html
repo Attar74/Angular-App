@@ -1,0 +1,15 @@
+<app-divider>Modal Component</app-divider>
+<button class="ui button" (click)="modelVisible = !modelVisible">Model</button>
+<app-modal  *ngIf="modelVisible" (close)="modelVisible = !modelVisible">
+    <header>
+        Open Modal
+    </header>
+    <p>
+        I'm reusable model
+    </p>
+    <ng-container modelFooter>
+        <button class="ui button" (click)="modelVisible = !modelVisible"> Close </button>
+    </ng-container>
+</app-modal>
+<app-divider>Accordion Component</app-divider>
+<app-accordion [items]="items"></app-accordion>
